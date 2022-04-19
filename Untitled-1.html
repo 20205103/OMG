@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>主页</title>
+    <style>
+        body{
+            background: url("骑车.jpg") no-repeat;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: rgb(255, 255, 255);
+            
+        }
+        li{
+            float: left;
+        }
+        li a,.dropbtn{
+            display: inline-block;
+            color: aliceblue;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        li a:hover, .dropdown:hover, .dropbtn{
+            background-color: rgba(150, 252, 7, 0.689);
+        }
+        .dropdown
+        {
+             display: inline-block;
+        }
+        .dropdown-content{
+            display:none;
+            position: absolute;
+            background-color: azure;
+        }
+        .dropdown-content a{
+            color: black;
+            padding: 12px 25px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: rgb(154, 159, 255);
+        }
+        .dropdown:hover .dropdown-content{
+            display: block;
+        }
+        a:link, a:visited
+        {
+            display: block;
+            width: 244px;
+            font-weight: bold;
+            color: azure;
+            background-color: cornflowerblue;
+            text-align: center;
+            padding: 6px;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        a:hover, a:active{
+            background-color: rgb(167, 186, 255);
+        }
+       .search{
+           position: absolute;
+           top: 40%;
+           left: 25%;
+           width: 650px;
+           height: 30px;
+           border: 2px solid rgb(146, 146, 234);
+           background-color: floralwhite;
+           color: black;
+           border-radius: 100px;
+       }
+       .search input {
+           float: left;
+           margin-top: 2px;
+           margin-left: 7px;
+           padding-left: 25px;
+           width: 538px;
+           height: 25px;
+           border-radius: 100px;
+           border: none;
+           background-color: floralwhite;
+           outline: none;
+       }
+       .search button{
+           float: left;
+           width: 80px;
+           height: 30px;
+           background-color: gold;
+           border-radius: 100px;
+           border: white;
+       }
+        </style>
+</head>
+<body>
+    <ul>
+        <li><a class="active" href="https://www.bilibili.com/">图集</a></li> 
+        <li><a href="https://www.bilibili.com/">视频</a></li>
+        <li><a href="https://www.bilibili.com/">新闻</a></li>
+        <li> <a href="#">其他</a> </li>
+        
+        <div class="dropdown"><a href="#" class="dropbtn">下拉菜单</a>
+            <div class="dropdown-content">
+                <a href="https://www.bilibili.com">链接1</a>
+                <a href="https://www.bilibili.com">链接2</a>
+                <a href="https://www.bilibili.com">链接3</a>
+            </div>
+        </div>
+    </ul>
+    <div class="search">
+        <input type="text" placeholder="输入关键词">
+        <button>搜 索</button>
+    </div>
+</body>
+</html>
