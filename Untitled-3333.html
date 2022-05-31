@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>计时开始/结束</title>
+    <style>
+        button {
+            display: block;
+            margin: 100px auto;
+            width: 400px;
+            height: 90px;
+            font-size: 25px;
+            color: rgb(0, 0, 0);
+            letter-spacing: 20px;
+            background-color: rgba(213, 243, 132, 0.29);
+        }
+        p {text-align: center;
+            font-size: 70px;
+            font-family: 'Times New Roman', Times, serif;
+            letter-spacing: 2px;
+            padding: 5px;}
+        
+        span {
+            color: rgb(248, 33, 0)
+        }
+    </style>
+
+</head>
+
+<body>
+    <button id="start">计时开始</button>
+    <p>Time passed <span id="counter">0</span> s</p>
+
+    <script>
+    const buttonElement = document.querySelector("button");
+    const counterElement = document.getElementById("counter");
+    let intervalId = null;
+    let started = false;
+    buttonElement.addEventListener("click",()=>{
+                   if(!started){
+                    intervalId = setInterval(() => {
+                        counterElement.textContent = String(Number(counterElement.textContent)+1);
+                    },1000);
+                    buttonElement.textContent = "计时暂停";
+                }
+                else {
+                    clearInterval(intervalId);
+                    buttonElement.textContent = "计时开始";
+                }
+                started = !started;
+            });
+    </script>
+</html>
